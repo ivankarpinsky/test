@@ -5,7 +5,7 @@ window.onload = function () {
     const ROUTES = ['из A в B', 'из B в A', 'из A в B и обратно в A'];
     const BASE_START_TIMES = ['18:00', '18:30', '18:45', '19:00', '19:15', '21:00'];
     const BASE_BACK_TIMES = ['18:30', '18:45', '19:00', '19:15', '19:35', '21:50', '21:55'];
-    const DATE_OFFSET = 4// -1 * (new Date().getTimezoneOffset() / 60) - 3;
+    const DATE_OFFSET = -1 * (new Date().getTimezoneOffset() / 60) - 3;
 
     let startTimes = BASE_START_TIMES.map(getTimesWithOffset);
     let backTimes = BASE_BACK_TIMES.map(getTimesWithOffset);
