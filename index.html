@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nevatrip test task</title>
+</head>
+<body>
+<div>
+    <label for="route">Выберите направление поездки</label>
+    <select name="route" id="route">
+        <option value="0">из A в B</option>
+        <option value="1">из B в A</option>
+        <option value="2">из A в B и обратно в А</option>
+    </select>
+</div>
+<div>
+    <label for="time">Выберите время</label>
+    <select name="time" id="time">
+        <!--    <option value="18:00(из A в B)">18:00(из A в B)</option>-->
+        <!--    <option value="18:30(из A в B)">18:30(из A в B)</option>-->
+        <!--    <option value="18:45(из A в B)">18:45(из A в B)</option>-->
+        <!--    <option value="19:00(из A в B)">19:00(из A в B)</option>-->
+        <!--    <option value="19:15(из A в B)">19:15(из A в B)</option>-->
+        <!--    <option value="21:00(из A в B)">21:00(из A в B)</option>-->
+        <!--    <option value="18:30(из B в A)">18:30(из B в A)</option>-->
+        <!--    <option value="18:45(из B в A)">18:45(из B в A)</option>-->
+        <!--    <option value="19:00(из B в A)">19:00(из B в A)</option>-->
+        <!--    <option value="19:15(из B в A)">19:15(из B в A)</option>-->
+        <!--    <option value="19:35(из B в A)">19:35(из B в A)</option>-->
+        <!--    <option value="21:50(из B в A)">21:50(из B в A)</option>-->
+        <!--    <option value="21:55(из B в A)">21:55(из B в A)</option>-->
+    </select>
+</div>
+<div style="display: none;" class="backTimeHidden">
+    <label for="backTime">Выберите время возвращения</label>
+    <select name="backTime" id="backTime">
+    </select>
+</div>
+<div>
+    <label for="num">Количество билетов</label>
+    <input id="num">
+    <button id="calculate">Посчитать</button>
+</div>
+<div id="result"></div>
+<script src="main.js"></script>
+</body>
+</html>
