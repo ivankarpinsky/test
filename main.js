@@ -17,6 +17,8 @@ window.onload = function () {
     let backTime = document.getElementById('backTime');
     let numInput = document.getElementById('num');
     let button = document.getElementById('calculate');
+    let resultDiv = document.getElementById('result');
+
     let routeType = parseInt(route.value);
 
     setSelectOptions((routeType === 1) ? backTimes : startTimes);
@@ -30,9 +32,7 @@ window.onload = function () {
         let startTime = routeType === 1 ? backTimes[parseInt(time.value)] : startTimes[parseInt(time.value)];
         let startFinishedTime = getTimePlusTripDuration(startTime);
 
-        let resultDiv = document.getElementById('result');
-
-        if (!num || num<=0) {
+        if (!num || num <= 0) {
             alert('Введите количество билетов');
             return;
         }
@@ -57,6 +57,7 @@ window.onload = function () {
     });
 
     route.addEventListener("change", (e) => {
+        resultDiv.innerHTML = '';
         let hiddenDiv = document.querySelector('.backTimeHidden');
         let routeType = parseInt(e.target.value);
 
@@ -71,6 +72,8 @@ window.onload = function () {
     })
 
     time.addEventListener("change", (e) => {
+        resultDiv.innerHTML = '';
+
         if (route.value !== "2") return;
 
         let minutes = startMinutes[parseInt(e.target.value)];
