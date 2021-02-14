@@ -38,6 +38,7 @@ window.onload = function () {
         }
 
         cost = ((routeType === 2) ? DOUBLE_TICKET_PRICE : TICKET_PRICE) * num;
+        show(resultDiv);
 
         if (routeType !== 2) {
             resultDiv.innerHTML = `Вы выбрали ${num} билета(-ов) по маршруту ${direction} стоимостью ${cost}р.<br/>
@@ -58,6 +59,8 @@ window.onload = function () {
 
     route.addEventListener("change", (e) => {
         resultDiv.innerHTML = '';
+        hide(resultDiv);
+
         let hiddenDiv = document.querySelector('.backTimeHidden');
         let routeType = parseInt(e.target.value);
 
@@ -73,6 +76,7 @@ window.onload = function () {
 
     time.addEventListener("change", (e) => {
         resultDiv.innerHTML = '';
+        hide(resultDiv);
 
         if (route.value !== "2") return;
 

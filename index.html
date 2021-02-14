@@ -2,46 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="bootstrap.min.css">
     <title>nevatrip test task</title>
 </head>
 <body>
-<div>
-    <label for="route">Выберите направление поездки</label>
-    <select name="route" id="route">
-        <option value="0">из A в B</option>
-        <option value="1">из B в A</option>
-        <option value="2">из A в B и обратно в А</option>
-    </select>
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-xl-4 col-lg-6 col-md-8 col-sm-12">
+            <div>
+                <label for="route">Выберите направление поездки</label>
+                <select name="route" id="route" class="form-select form-select-sm" aria-label=".form-select-sm example">
+                    <option value="0">из A в B</option>
+                    <option value="1">из B в A</option>
+                    <option value="2">из A в B и обратно в А</option>
+                </select>
+            </div>
+            <div>
+                <label for="time">Выберите
+                    время</label>
+                <select name="time" id="time" class="form-select form-select-sm" aria-label=".form-select-sm example">
+                </select>
+            </div>
+            <div style="display: none;" class="backTimeHidden">
+                <label for="backTime">Выберите время возвращения</label>
+                <select name="backTime" id="backTime" class="form-select form-select-sm"
+                        aria-label=".form-select-sm example">
+                </select>
+            </div>
+            <label for="num">Количество билетов</label>
+            <div class="input-group input-group-sm">
+                <input class="form-control" type="number" id="num">
+                <button id="calculate" class="btn btn-primary">Посчитать</button>
+            </div>
+            <div id="result" style="display: none" class="alert alert-primary mt-2"></div>
+        </div>
+    </div>
 </div>
-<div>
-    <label for="time">Выберите время</label>
-    <select name="time" id="time">
-        <!--    <option value="18:00(из A в B)">18:00(из A в B)</option>-->
-        <!--    <option value="18:30(из A в B)">18:30(из A в B)</option>-->
-        <!--    <option value="18:45(из A в B)">18:45(из A в B)</option>-->
-        <!--    <option value="19:00(из A в B)">19:00(из A в B)</option>-->
-        <!--    <option value="19:15(из A в B)">19:15(из A в B)</option>-->
-        <!--    <option value="21:00(из A в B)">21:00(из A в B)</option>-->
-        <!--    <option value="18:30(из B в A)">18:30(из B в A)</option>-->
-        <!--    <option value="18:45(из B в A)">18:45(из B в A)</option>-->
-        <!--    <option value="19:00(из B в A)">19:00(из B в A)</option>-->
-        <!--    <option value="19:15(из B в A)">19:15(из B в A)</option>-->
-        <!--    <option value="19:35(из B в A)">19:35(из B в A)</option>-->
-        <!--    <option value="21:50(из B в A)">21:50(из B в A)</option>-->
-        <!--    <option value="21:55(из B в A)">21:55(из B в A)</option>-->
-    </select>
-</div>
-<div style="display: none;" class="backTimeHidden">
-    <label for="backTime">Выберите время возвращения</label>
-    <select name="backTime" id="backTime">
-    </select>
-</div>
-<div>
-    <label for="num">Количество билетов</label>
-    <input id="num">
-    <button id="calculate">Посчитать</button>
-</div>
-<div id="result"></div>
 <script src="main.js"></script>
 </body>
 </html>
